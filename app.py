@@ -5,7 +5,7 @@ from gino import Gino
 
 
 app = web.Application()
-db_uri = 'postgresql+asyncpg://aiohttp:1234@localhost:5433/aiohttp'
+db_uri = 'postgresql+asyncpg://aiohttp:1234@localhost:5432/aiohttp'
 # app.config.from_mapping(SQLALCHEMY_DATABASE_URI=db_uri)
 db = Gino()
 # migrate = Migrate(app, db)
