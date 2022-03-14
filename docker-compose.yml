@@ -5,11 +5,12 @@ services:
 
   db:
     image: postgres
+    container_name: db_postgres_aiohttp
     restart: always
     environment:
       POSTGRES_USER: aiohttp
       POSTGRES_PASSWORD: 1234
       POSTGRES_DB: aiohttp
     ports:
-      - 5433:5433
-
+      # Внешний порт : Внутренний порт
+      - 5433:5432
